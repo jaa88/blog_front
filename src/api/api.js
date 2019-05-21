@@ -15,3 +15,8 @@ export const batchRemoveUser = params => { return axios.get(`${base}/user/batchr
 export const editUser = params => { return axios.get(`${base}/user/edit`, { params: params }); };
 
 export const addUser = params => { return axios.get(`${base}/user/add`, { params: params }); };
+
+let backBaseUrl="localhost:8081";
+let targetUrl="http://localhost:8081/user/getAllCount";
+
+export const getUserCount = params =>{return axios.get(targetUrl, { params: params });};
